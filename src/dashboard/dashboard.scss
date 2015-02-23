@@ -2,6 +2,17 @@
 .tab-view{
     height: 40px;
     width: 40px;
+
+    background: url(../images/table.png) #000 center center no-repeat !important;
+    border: solid 1px;
+}
+
+.chart-view{
+    height: 40px;
+    width: 40px;
+
+    background: url(../images/chart.png) center center no-repeat !important;
+    border: solid 1px;
 }
 /* Hide for mobile, show later */
 .sidebar {
