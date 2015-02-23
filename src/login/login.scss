@@ -1,0 +1,42 @@
+/* ----- Board ----- */
+.board{
+	margin: 0 auto;
+	max-width: 960px;
+	height: 480px;
+	background-color: #ccc;
+}
+
+/* ----- Button ----- */
+button, html input[type="button"], input[type="reset"], input[type="submit"]{
+	width: 100px;
+	border-radius: 0;
+
+}
+
+.btn-inactive{
+    color: #fff;
+    background-color: #000; 
+}
+
+.btn-inactive:hover{
+    color: #fff;
+    background-color: #ccc; 
+}
+
+.btn-selected{
+    color: #000;
+    background-color: #C0C0C0;
+}
+/* Hide for mobile, show later */
+@media (min-width: 768px) {
+
+}
+
+
+/* ----- Main Content ----- */
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  
+}

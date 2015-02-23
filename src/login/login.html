@@ -1,0 +1,13 @@
+<section id="login-view" class="container-fluid main board">
+    <h1 class="row">Log In</h1>
+
+    <div class="row">
+    	<select ng-model="userName" ng-options="user.name for user in vm.user">
+    		<option value="">Select user</option>
+    	</select><!--/login form-->
+    </div>
+	<br>
+     <div class="row">
+    	<input type="button" class="btn btn-inactive" value="Login" ui-sref="dashboard({userName : userName.name})">	
+    </div>
+</section>

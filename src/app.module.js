@@ -6,6 +6,7 @@
         'app.core',
 
         // Features
+        'app.login',
         'app.dashboard',
         'app.profile'
     ]);

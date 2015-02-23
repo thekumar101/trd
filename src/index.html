@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <base href="/">
 
-    <title>Angular Template</title>
+    <title>Trader Desktop</title>
 
     <!-- build:css styles/lib.css -->
     <!-- bower:css -->
@@ -29,30 +29,6 @@
 
 <body>
     <div ng-controller="AppController as vm">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" ui-sref="dashboard">Portfolio Manager</a>
-                </div>
-
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li ng-class="vm.isActive(r)"
-                            ng-repeat="r in vm.navRoutes">
-                            <a ui-sref="{{r.name}}"
-                               ng-bind="r.title"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
         <section id="content" class="content">
             <div ui-view></div>
         </section>
@@ -78,29 +54,36 @@
     <script src="/src/app.module.js"></script>
     <script src="/src/core/core.module.js"></script>
     <script src="/src/dashboard/dashboard.module.js"></script>
-    <script src="/src/framework/exception/exception.module.js"></script>
-    <script src="/src/framework/logger/logger.module.js"></script>
-    <script src="/src/framework/router/router.module.js"></script>
+    <script src="/src/login/login.module.js"></script>
     <script src="/src/profile/profile.module.js"></script>
+    <script src="/src/framework/logger/logger.module.js"></script>
+    <script src="/src/framework/exception/exception.module.js"></script>
+    <script src="/src/framework/router/router.module.js"></script>
     <script src="/src/app.controller.js"></script>
     <script src="/src/core/core.config.js"></script>
     <script src="/src/core/core.constants.js"></script>
+    <script src="/src/dashboard/dashboard.controller.js"></script>
+    <script src="/src/dashboard/dashboard.route.js"></script>
+    <script src="/src/login/login.controller.js"></script>
+    <script src="/src/login/login.route.js"></script>
+    <script src="/src/profile/profile.controller.js"></script>
+    <script src="/src/profile/profile.route.js"></script>
+    <script src="/src/vendor/angular-resource.min.js"></script>
+    <script src="/src/vendor/lodash.min.js"></script>
+    <script src="/src/vendor/socket.js"></script>
     <script src="/src/core/directives/barchart.directive.js"></script>
     <script src="/src/core/filters/percentage.filter.js"></script>
     <script src="/src/core/services/account.service.js"></script>
-    <script src="/src/dashboard/dashboard.controller.js"></script>
-    <script src="/src/dashboard/dashboard.route.js"></script>
+    <script src="/src/core/services/user.service.js"></script>
+    <script src="/src/framework/logger/logger.js"></script>
     <script src="/src/framework/exception/exception-handler.provider.js"></script>
     <script src="/src/framework/exception/exception.js"></script>
-    <script src="/src/framework/logger/logger.js"></script>
     <script src="/src/framework/router/router-helper.provider.js"></script>
-    <script src="/src/profile/profile.controller.js"></script>
-    <script src="/src/profile/profile.route.js"></script>
     <!-- endinject -->
 
     <!-- inject:templates:js -->
     <!-- endinject -->
-
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
     <!-- endbuild -->
 </body>
 </html>
